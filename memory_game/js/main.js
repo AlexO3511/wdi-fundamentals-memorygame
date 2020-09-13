@@ -31,21 +31,32 @@ function checkForMatch (){
 }
 
 }
-function flipCard(cardId){
+function flipCard(){
 
 console.log("User flipped " + cards[cardId].rank)
 cardsInPlay.push(cards[cardId].rank);
 cardsInPlay;
 console.log(cards[cardId].suit);
 console.log(cards[cardId].cardImage);
-
+this.setAttribute(src, cards[cardId].cardImage);
 if ( cardsInPlay.length === 2){
 	checkForMatch();
 } 
 }
 
-flipCard(0);
-flipCard(2);
 
+function createBoard(){
+	for (let i = 0; i < cards.length; i++){
+		this.getAttribute('data-id');
 
+		let newListItem = document.createElement('cardElement');
+
+	cardElement.setAttribute(src, 'images/back.png');
+	cardElement.setAttribute('data-id', i);
+
+	button.addEventListener('click', flipCard);
+	document.getElementsByid('game-board')[0].appendChild(newListItem);
+	}
+createBoard();	
+}
 
